@@ -12,16 +12,16 @@ public class JpaService {
 
     private EntityManagerFactory entityManagerFactory;
 
-    private JpaService(){
+    private JpaService() {
         entityManagerFactory = Persistence.createEntityManagerFactory("delivery");
     }
 
-    public static synchronized JpaService getInstance(){
+    public static synchronized JpaService getInstance() {
         return instance == null ? instance = new JpaService() : instance;
     }
 
-    public void shutdown(){
-        if(entityManagerFactory != null)
+    public void shutdown() {
+        if (entityManagerFactory != null)
             entityManagerFactory.close();
     }
 
@@ -29,19 +29,19 @@ public class JpaService {
         return entityManagerFactory;
     }
 
-    public <T> T runInTransaction(Function<EntityManager,T> function){
+    public <T> T runInTransaction(Function<EntityManager, T> function) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
         EntityTransaction transaction = entityManager.getTransaction();
-        boolean success=false;
+        boolean success = false;
         transaction.begin();
-        try{
+        try {
             T returnValue = function.apply(entityManager);
             success = true;
             return returnValue;
-        }finally {
-            if(success){
+        } finally {
+            if (success) {
                 transaction.commit();
-            }else{
+            } else {
                 transaction.rollback();
             }
         }

@@ -2,11 +2,11 @@ version: "3.8"
 
 services: # adds 2 services: mysql and phpmyadmin to connect with
   web:
-    image: quay.io/wildfly/wildfly
+    image: tomcat:latest
     ports:
       - "8088:8080"
     volumes:
-      - ./target/package_delivery-1.0-SNAPSHOT.war:/opt/wildfly/standalone/deployments/ROOT.war
+        - ./webapp:/usr/local/tomcat/webapps
   db:
     image: mysql:latest # use latest version of mysql
     container_name: db # add a name for the container

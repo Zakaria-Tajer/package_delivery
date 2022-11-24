@@ -5,7 +5,6 @@ import java.io.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
 public class HelloServlet extends HttpServlet {
     private String message;
 
@@ -14,6 +13,14 @@ public class HelloServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String path = request.getServletPath();
+        if (path.equals("/index.jsp")) {
+            response.setContentType("text/html");
+            response.setCharacterEncoding("UTF-8");
+            response.getWriter().println("<h1>" + message + "</h1>");
+        } else {
+            response.sendError(404);
+        }
         response.setContentType("text/html");
         //
 

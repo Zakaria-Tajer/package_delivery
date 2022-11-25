@@ -73,13 +73,13 @@ public class DeliveryManagerEntity implements Serializable {
         this.password = password;
     }
 
-//    public ManagerEntity getManager() {
-//        return manager;
-//    }
-//
-//    public void setManager(ManagerEntity manager) {
-//        this.manager = manager;
-//    }
+    public ManagerEntity getManager() {
+        return manager;
+    }
+
+    public void setManager(ManagerEntity manager) {
+        this.manager = manager;
+    }
 
 
 }

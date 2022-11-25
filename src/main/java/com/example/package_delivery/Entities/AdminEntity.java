@@ -89,20 +89,4 @@ public class AdminEntity implements Serializable {
         this.password = password;
     }
 
-    public static void main(String[] args) {
-//        add new admin
-        AdminEntity adminEntity = new AdminEntity();
-        adminEntity.setFirstName("admin");
-        adminEntity.setLastName("admin");
-        adminEntity.setEmail("gliouinemahdi@gmail.com");
-        adminEntity.setPassword("admin");
-        AdminDao adminDao = new AdminDao();
-        try {
-            adminDao.createAdmin(adminEntity);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-
-    }
 }

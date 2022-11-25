@@ -17,7 +17,7 @@ public class SendMail {
         properties.put("mail.smtp.port", "587");
 
         String myAccount = "gliouinemahdi@gmail.com";
-        String password = "rmcfyyrayevkizym";
+        String password = "jfqztuhjzfufcmgb";
 
         Session session = Session.getDefaultInstance(properties, new Authenticator() {
             @Override

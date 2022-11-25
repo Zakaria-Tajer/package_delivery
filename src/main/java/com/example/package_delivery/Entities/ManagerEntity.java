@@ -73,20 +73,20 @@ public class ManagerEntity implements Serializable {
         this.password = password;
     }
 
-//    public AdminEntity getAdmin() {
-//        return admin;
-//    }
-//
-//    public void setAdmin(AdminEntity admin) {
-//        this.admin = admin;
-//    }
-//
-//    public List<DeliveryManagerEntity> getDeliveryManagers() {
-//        return deliveryManagers;
-//    }
-//
-//    public void setDeliveryManagers(List<DeliveryManagerEntity> deliveryManagers) {
-//        this.deliveryManagers = deliveryManagers;
-//    }
+    public AdminEntity getAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(AdminEntity admin) {
+        this.admin = admin;
+    }
+
+    public List<DeliveryManagerEntity> getDeliveryManagers() {
+        return deliveryManagers;
+    }
+
+    public void setDeliveryManagers(List<DeliveryManagerEntity> deliveryManagers) {
+        this.deliveryManagers = deliveryManagers;
+    }
 
 }

@@ -1,4 +1,18 @@
 package com.example.package_delivery.Dao;
 
-public class DriverDao {
+import com.example.package_delivery.Entities.DriverEntity;
+
+import java.util.List;
+
+public class DriverDao extends AbstractHibernateDao<DriverEntity> {
+    public DriverDao() {
+        tableName = "driver";
+        setClazz(DriverEntity.class);
+    }
+
+    public List getAllDrivers() {
+        return findAll();
+    }
+
 }
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+>
+<h:head>
+   <title>Livraison page</title>
+</h:head>
+<h:body>
+
+
+   <p:dataTable value="#{LivraisonController}" var="trajet">
+      <p:column styleClass="border:solid 1px red; padding:12px;" headerText="trajet ID">
+         <h:outputText value="#{trajet.id }" />
+      </p:column>
+      <p:column headerText="trajet depart">
+         <h:outputText value="#{trajet.depart}" />
+      </p:column>TrajetEntity
+      <p:column headerText="trajet arrive">
+         <h:outputText value="#{trajet.arrive}" />
+      </p:column>
+      <p:column headerText="trajet distance">
+         <h:outputText value="#{trajet.distance}" />
+      </p:column>
+      <p:column headerText="trajet arrive">
+         <h:outputText value="#{trajet.zone}" />
+      </p:column>
+   </p:dataTable>
+
+   <h:form>
+      <h:outputLabel>Date</h:outputLabel>
+      <h:inputText value="#{livraisonBean.date}" /> <br/>
+      <h:outputLabel >Poid</h:outputLabel>
+      <h:inputText value="#{livraisonBean.poid}" /> <br/>
+      <h:outputLabel >Prix</h:outputLabel>
+      <h:inputText value="#{livraisonBean.prix}" /> <br/>
+      <h:outputLabel >Trajet ID </h:outputLabel>
+      <h:inputText value="#{livraisonBean.trajetId }" /> <br/>
+      <h:commandButton value="addLivraison" action="#{livraisonController.addLivraison()}"/>
+   </h:form>
+
+</h:body>
+
+</html>

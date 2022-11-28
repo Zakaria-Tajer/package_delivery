@@ -24,7 +24,7 @@ services: # adds 2 services: mysql and phpmyadmin to connect with
     container_name: phpmyadmin
     image: phpmyadmin/phpmyadmin:latest
     ports:
-      - "8081:80"
+      - "8084:80"
     environment:
       MYSQL_ROOT_PASSWORD: mypassword #(Required) set the password for the root superuser account.
       PMA_HOST: db   # define the address/hostname of the mysql server eg mysql container name.

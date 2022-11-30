@@ -88,5 +88,6 @@ public class AdminEntity implements Serializable {
         this.email = email;
         this.password = password;
     }
+    
 
 }

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+>
+<h:head>
+    <script src="https://cdn.tailwindcss.com" type=""></script>
+
+    <title>Livraison page</title>
+</h:head>
+<h:body>
+    <div class="flex items-center justify-center h-screen w-full">
+        <!-- Login Container -->
+            <div class="w-1/3 flex-col border bg-white px-6 py-14 shadow-md rounded-[4px] ">
+                <div class="mb-8 flex justify-center">
+                    <h1 class="text-lg ">Welcome to login</h1>
+
+                </div>
+                <div class="flex flex-col text-sm rounded-md">
+                    <label>
+                        Email
+                    </label>
+                    <h:inputText styleClass="mb-5 rounded-[4px] border p-3 hover:outline-none focus:outline-none hover:border-yellow-500 "
+                                 type="text" h:placeholder="Email" value="#{loginBean.email}"/>
+                    <label>
+                        password
+                    </label>
+                    <h:inputText h:type="password" styleClass="border rounded-[4px] p-3 hover:outline-none focus:outline-none hover:border-yellow-500"
+                                 type="password" h:placeholder="password"  value="#{loginBean.pwd}"/>
+                </div>
+                <h:commandButton action="#{loginBean.checkUser()}" class="mt-5 w-full border p-2 bg-gradient-to-r from-gray-800 bg-gray-500 text-white rounded-[4px] hover:bg-slate-400 scale-105 duration-300"
+                        type="submit" value="sign in">
+                </h:commandButton>
+                <div class="mt-5 flex justify-between text-sm text-gray-600">
+                    <a href="#">Forgot password?</a>
+                    <a href="#">Sign up</a>
+                </div>
+
+
+            </div>
+
+    </div>
+
+
+</h:body>
+
+</html>

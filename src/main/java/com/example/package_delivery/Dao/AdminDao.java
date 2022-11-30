@@ -36,6 +36,7 @@ public class AdminDao extends AbstractHibernateDao<AdminEntity> {
             return null;
         }
         if (checkPassword(password, admin.getPassword())) {
+            System.out.printf("success");
             return admin;
         } else {
             return null;
